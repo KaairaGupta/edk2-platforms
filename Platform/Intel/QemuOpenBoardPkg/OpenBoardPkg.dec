@@ -1,0 +1,49 @@
+## @file
+#
+# The DEC files are used by the utilities that parse DSC and
+# INF files to generate AutoGen.c and AutoGen.h files
+# for the build infrastructure.
+#
+#  Copyright (c) 2021, Intel Corporation. All rights reserved.<BR>
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+
+[Defines]
+DEC_SPECIFICATION = 0x00010017
+PACKAGE_NAME = OpenBoardPkg
+PACKAGE_VERSION = 0.1
+PACKAGE_GUID = 2daf5f34-50e5-4b9d-b8e3-5562334d87e5
+
+[Includes]
+
+[Guids]
+ gUefiOvmfPkgTokenSpaceGuid            = {0x93bb96af, 0xb9f2, 0x4eb8, {0x94, 0x62, 0xe0, 0xba, 0x74, 0x56, 0x42, 0x36}}
+
+[Protocols]
+
+[Ppis]
+
+[LibraryClasses]
+
+[PcdsFixedAtBuild, PcdsPatchableInModule]
+
+[PcdsFixedAtBuild]
+
+  ## The base address of the SEC GHCB page used by SEV-ES.
+  gUefiOvmfPkgTokenSpaceGuid.PcdOvmfSecGhcbBase|0|UINT32|0x40
+  gUefiOvmfPkgTokenSpaceGuid.PcdOvmfSecGhcbSize|0|UINT32|0x41
+  gUefiOvmfPkgTokenSpaceGuid.PcdOvmfSecGhcbBackupBase|0|UINT32|0x44
+  gUefiOvmfPkgTokenSpaceGuid.PcdOvmfSecGhcbBackupSize|0|UINT32|0x45
+
+
+[PcdsDynamic]
+
+[PcdsDynamicEx]
+
+[PcdsDynamic, PcdsDynamicEx]
+
+[PcdsPatchableInModule]
+
+[PcdsFeatureFlag]
